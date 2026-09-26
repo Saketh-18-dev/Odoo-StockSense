@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Architecture
+- StockSense is frontend-only: use typed mock data and local React state, with no backend, APIs, authentication, or persistence.
+- Shared navigation lives in the root application shell; each major inventory screen is a dedicated TanStack route.
