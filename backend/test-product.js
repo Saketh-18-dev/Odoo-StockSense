@@ -34,9 +34,6 @@ req.on("error", (error) => {
     console.error("Error:", error);
 });
 
-<<<<<<< HEAD
-req.end();
-=======
 req.write(data);
 req.end();
->>>>>>> 3ae7188 (Complete StockSense dashboard and backend integration)
+
