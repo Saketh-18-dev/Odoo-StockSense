@@ -1,7 +1,7 @@
 # StockSense build
-- [ ] Design system and reusable components
-- [ ] Responsive application shell
-- [ ] Dashboard and products
-- [ ] Operations pages
-- [ ] Warehouses and profile
-- [ ] Responsive and interaction verification
+- [x] Design system and reusable components
+- [x] Responsive application shell
+- [x] Dashboard and products
+- [x] Operations pages
+- [x] Warehouses and profile
+- [x] Responsive and interaction verification
