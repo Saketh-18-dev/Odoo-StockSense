@@ -18,7 +18,6 @@ dist-ssr/
 .env
 .env.*
 *.local
-
 # Logs
 logs/
 *.log
