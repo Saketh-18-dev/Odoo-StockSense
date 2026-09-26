@@ -1,16 +1,15 @@
 const http = require("http");
 
-const inventoryId = "e879cf36-df4b-455a-adb9-3b2a9358a068";
-
 const data = JSON.stringify({
-    quantity: 60
+    name: "Test Warehouse",
+    location: "Hyderabad"
 });
 
 const options = {
     hostname: "localhost",
     port: 5000,
-    path: `/api/inventory/${inventoryId}`,
-    method: "PUT",
+    path: "/api/warehouses",
+    method: "POST",
     headers: {
         "Content-Type": "application/json",
         "Content-Length": Buffer.byteLength(data)
@@ -31,12 +30,9 @@ const req = http.request(options, (res) => {
 });
 
 req.on("error", (error) => {
-    console.error("Error:", error);
+    console.error("FULL ERROR:", error);
 });
 
-<<<<<<< HEAD
-req.end();
-=======
+
 req.write(data);
 req.end();
->>>>>>> 3ae7188 (Complete StockSense dashboard and backend integration)
