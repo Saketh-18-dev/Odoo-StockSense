@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdjustmentsRouteImport } from './routes/adjustments'
+import { Route as DeliveriesRouteImport } from './routes/deliveries'
+import { Route as MoveHistoryRouteImport } from './routes/move-history'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ReceiptsRouteImport } from './routes/receipts'
+import { Route as TransfersRouteImport } from './routes/transfers'
+import { Route as WarehousesRouteImport } from './routes/warehouses'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdjustmentsRoute = AdjustmentsRouteImport.update({
+  id: '/adjustments',
+  path: '/adjustments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeliveriesRoute = DeliveriesRouteImport.update({
+  id: '/deliveries',
+  path: '/deliveries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoveHistoryRoute = MoveHistoryRouteImport.update({
+  id: '/move-history',
+  path: '/move-history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReceiptsRoute = ReceiptsRouteImport.update({
+  id: '/receipts',
+  path: '/receipts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TransfersRoute = TransfersRouteImport.update({
+  id: '/transfers',
+  path: '/transfers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WarehousesRoute = WarehousesRouteImport.update({
+  id: '/warehouses',
+  path: '/warehouses',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/adjustments': typeof AdjustmentsRoute
+  '/deliveries': typeof DeliveriesRoute
+  '/move-history': typeof MoveHistoryRoute
+  '/products': typeof ProductsRoute
+  '/profile': typeof ProfileRoute
+  '/receipts': typeof ReceiptsRoute
+  '/transfers': typeof TransfersRoute
+  '/warehouses': typeof WarehousesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/adjustments': typeof AdjustmentsRoute
+  '/deliveries': typeof DeliveriesRoute
+  '/move-history': typeof MoveHistoryRoute
+  '/products': typeof ProductsRoute
+  '/profile': typeof ProfileRoute
+  '/receipts': typeof ReceiptsRoute
+  '/transfers': typeof TransfersRoute
+  '/warehouses': typeof WarehousesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/adjustments': typeof AdjustmentsRoute
+  '/deliveries': typeof DeliveriesRoute
+  '/move-history': typeof MoveHistoryRoute
+  '/products': typeof ProductsRoute
+  '/profile': typeof ProfileRoute
+  '/receipts': typeof ReceiptsRoute
+  '/transfers': typeof TransfersRoute
+  '/warehouses': typeof WarehousesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/adjustments'
+    | '/deliveries'
+    | '/move-history'
+    | '/products'
+    | '/profile'
+    | '/receipts'
+    | '/transfers'
+    | '/warehouses'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/adjustments'
+    | '/deliveries'
+    | '/move-history'
+    | '/products'
+    | '/profile'
+    | '/receipts'
+    | '/transfers'
+    | '/warehouses'
+  id:
+    | '__root__'
+    | '/'
+    | '/adjustments'
+    | '/deliveries'
+    | '/move-history'
+    | '/products'
+    | '/profile'
+    | '/receipts'
+    | '/transfers'
+    | '/warehouses'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdjustmentsRoute: typeof AdjustmentsRoute
+  DeliveriesRoute: typeof DeliveriesRoute
+  MoveHistoryRoute: typeof MoveHistoryRoute
+  ProductsRoute: typeof ProductsRoute
+  ProfileRoute: typeof ProfileRoute
+  ReceiptsRoute: typeof ReceiptsRoute
+  TransfersRoute: typeof TransfersRoute
+  WarehousesRoute: typeof WarehousesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/adjustments': {
+      id: '/adjustments'
+      path: '/adjustments'
+      fullPath: '/adjustments'
+      preLoaderRoute: typeof AdjustmentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deliveries': {
+      id: '/deliveries'
+      path: '/deliveries'
+      fullPath: '/deliveries'
+      preLoaderRoute: typeof DeliveriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/move-history': {
+      id: '/move-history'
+      path: '/move-history'
+      fullPath: '/move-history'
+      preLoaderRoute: typeof MoveHistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/receipts': {
+      id: '/receipts'
+      path: '/receipts'
+      fullPath: '/receipts'
+      preLoaderRoute: typeof ReceiptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/transfers': {
+      id: '/transfers'
+      path: '/transfers'
+      fullPath: '/transfers'
+      preLoaderRoute: typeof TransfersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/warehouses': {
+      id: '/warehouses'
+      path: '/warehouses'
+      fullPath: '/warehouses'
+      preLoaderRoute: typeof WarehousesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdjustmentsRoute: AdjustmentsRoute,
+  DeliveriesRoute: DeliveriesRoute,
+  MoveHistoryRoute: MoveHistoryRoute,
+  ProductsRoute: ProductsRoute,
+  ProfileRoute: ProfileRoute,
+  ReceiptsRoute: ReceiptsRoute,
+  TransfersRoute: TransfersRoute,
+  WarehousesRoute: WarehousesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
