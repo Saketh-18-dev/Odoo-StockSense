@@ -1,24 +1,21 @@
-# Frontend Express
+# StockSense
 
-please do the front end for all components within 10 credits
+Inventory Management System
 
-This project was built with [Lovable](https://lovable.dev).
+## Tech Stack
 
-## Build with Lovable
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/1d7480b3-77b1-4a1c-b550-be18cb5d155f).
+## Status
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Frontend implementation in progress.
 
-## Development
+Backend:
+- Node.js
+- Express
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+Database:
+- Supabase PostgreSQL
